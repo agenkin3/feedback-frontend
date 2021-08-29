@@ -1,6 +1,8 @@
 export default function studentReducer(state = {students: []}, action) {
-
-  return state
+  switch(action.type) {
+    case 'FETCH_STUDENTS':
+      return {students: action.payload}
+      default:
+        return state
+  }
 }
-
-//dispatchEvent(actionObj)

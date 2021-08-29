@@ -1,20 +1,17 @@
 import React from 'react';
-
+import {connect} from 'react-redux'
+import {fetchStudents} from './actions/fetchStudents'
+import StudentsContainer from './containers/StudentsContainer'
 
 class App extends React.Component {
-
-componentDidMount() {
-   fetch('http://127.0.0.1:3000/api/v1/students/1/evaluations')
-    .then(response => response.json())
-    .then (data => console.log(data))
-  }
-
-  render() {
+  
+render() {
     return (
     <div className="App">
-        App
+        <StudentsContainer/>
     </div>
     );
   }
 }
+
 export default App;
