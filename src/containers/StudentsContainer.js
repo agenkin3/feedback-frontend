@@ -1,5 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
+import {Route} from 'react-router-dom'
 import Students from '../components/Students'
 import {fetchStudents} from '../actions/fetchStudents'
 import StudentInput from '../components/Studentinput'
@@ -15,6 +16,7 @@ componentDidMount() {
 render () {
   return (
     <div>
+      <Route path='/students/new' component={StudentInput}/>
       <StudentInput/> <br></br>
       <Students students={this.props.students}/>
 
