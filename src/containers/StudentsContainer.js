@@ -2,11 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Students from '../components/Students'
 import {fetchStudents} from '../actions/fetchStudents'
+import StudentInput from '../components/Studentinput'
 
 //import Student from '.../components/Student'
-//import {fetchStudents} from '../actions/fetchStudents'
-//import StudentInput from '../components/StudentInput'
-//import { connect } from 'react-redux'
 
 class StudentsContainer extends React.Component {
   
@@ -17,6 +15,7 @@ componentDidMount() {
 render () {
   return (
     <div>
+      <StudentInput/> <br></br>
       <Students students={this.props.students}/>
 
     </div>
