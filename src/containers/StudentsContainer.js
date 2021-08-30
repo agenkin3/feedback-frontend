@@ -2,8 +2,10 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Route} from 'react-router-dom'
 import Students from '../components/Students'
+import Student from '../components/Student'
 import {fetchStudents} from '../actions/fetchStudents'
-import StudentInput from '../components/Studentinput'
+import StudentInput from '../components/StudentInput'
+
 
 //import Student from '.../components/Student'
 
@@ -17,8 +19,8 @@ render () {
   return (
     <div>
       <Route path='/students/new' component={StudentInput}/>
-      <StudentInput/> <br></br>
-      <Students students={this.props.students}/>
+      <Route path='/students/:id' render={(routerProps) => <Student {...routerProps} students={this.props.students}/>}/>
+      <Route exact path='/students' render={(routerProps) => <Students {...routerProps} students={this.props.students}/> }/>
 
     </div>
 
