@@ -35,6 +35,8 @@ class StudentEdit extends React.Component {
           <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
           <label>Year: </label>
           <input type='float' placeholder='Year' value={this.state.year} name="year" onChange={this.handleChange}/><br/>
+          <label>Category: </label>
+          <input type='float' placeholder='Category' value={this.state.year} name="category" onChange={this.handleChange}/><br/>
           <input type="submit"/>
         </form>
       </div>

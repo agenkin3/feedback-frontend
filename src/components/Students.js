@@ -7,10 +7,10 @@ const Students = (props) => {
   return (
     <div>
       {props.students.map(student => 
-      <li key={student.id}>
-    <Link to={`/students/${student.id}`}>{student.name} - ${student.year}</Link>
-    </li>)}
-    </div>
+      <div key={student.id}>
+    <Link path={'/students/:id'}>{student.name}</Link> 
+      </div>)}
+      </div>
   )
 }
 
