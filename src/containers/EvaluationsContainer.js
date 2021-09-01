@@ -7,7 +7,8 @@ class EvaluationsContainer extends React.Component {
   render() {
     return (
       <div>
-          
+          <EvaluationInput/>
+          <Evaluations evaluations={this.props.students && this.props.student.evaluations}/>
       </div>
 
     )
@@ -15,3 +16,6 @@ class EvaluationsContainer extends React.Component {
   }
 }
 export default EvaluationsContainer
+
+
+//does this need a Switch statement?

@@ -1,3 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
-//import {deleteEvaluation} from '../actions/deleteEvaluation'
+
+const Evaluations = (props) => {
+  
+  return (
+    <div>
+      Evaluations
+    </div>
+  )
+}
+
+export default Evaluations
