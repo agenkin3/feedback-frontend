@@ -6,9 +6,6 @@ import Student from '../components/Student'
 import {fetchStudents} from '../actions/fetchStudents'
 import StudentInput from '../components/StudentInput'
 
-
-//import Student from '.../components/Student'
-
 class StudentsContainer extends React.Component {
   
 componentDidMount() {
@@ -21,7 +18,6 @@ render () {
       <Route path='/students/new' component={StudentInput}/>
       <Route path='/students/:id' render={(routerProps) => <Student {...routerProps} students={this.props.students}/>}/>
       <Route exact path='/students' render={(routerProps) => <Students {...routerProps} students={this.props.students}/> }/>
-
     </div>
 
   )
