@@ -32,11 +32,11 @@ class StudentEdit extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>Name: </label>
-          <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
+          <input type='text' placeholder='Enter New Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
           <label>Year: </label>
-          <input type='float' placeholder='Year' value={this.state.year} name="year" onChange={this.handleChange}/><br/>
+          <input type='float' placeholder='Enter New Year' value={this.state.year} name="year" onChange={this.handleChange}/><br/>
           <label>Category: </label>
-          <input type='float' placeholder='Category' value={this.state.year} name="category" onChange={this.handleChange}/><br/>
+          <input type='float' placeholder='Enter New Category' value={this.state.year} name="category" onChange={this.handleChange}/><br/>
           <input type="submit"/>
         </form>
       </div>

@@ -4,25 +4,25 @@ import {deleteEvaluation} from '../actions/deleteEvaluation'
 
 class Evaluations extends React.Component {
 
-  state = {}
-  
-   handleDelete = (evaluation) => {
-      this.props.deleteEvaluation(evaluation.id, evaluation.student_id)
-    }
-  
-  vote = (id) => {
-    this.state[id] ? this.setState({[id]: this.state[id] += 1}) : this.setState({[id]: 1})
+state = {}
+
+ handleDelete = (evaluation) => {
+    this.props.deleteEvaluation(evaluation.id, evaluation.student_id)
   }
-  
-  render() {
-    return (
-        <div>
-          {this.props.evaluations && this.props.evaluations.map(evaluation =>
-            <li key={evaluation.id}>{evaluation.date} - {evaluation.competency} - {evaluation.rating}  <button onClick={() => this.vote(evaluation.id)}>Vote {this.state[evaluation.id] ? this.state[evaluation.id] : 0}</button><button onClick={() => this.handleDelete(evaluation)}>Delete</button></li>
-          )}
-        </div>
-      )
-    }
+
+vote = (id) => {
+  this.state[id] ? this.setState({[id]: this.state[id] += 1}) : this.setState({[id]: 1})
+}
+
+render() {
+  return (
+      <div>
+        {this.props.evaluations && this.props.evaluations.map(evaluation =>
+          <li key={evaluation.id}>{evaluation.date} - {evaluation.kind} - {evaluation.amount}  <button onClick={() => this.vote(evaluation.id)}>Agree {this.state[evaluation.id] ? this.state[evaluation.id] : 0}</button><button onClick={() => this.handleDelete(evaluation)}>Delete</button></li>
+        )}
+      </div>
+    )
   }
-  
-  export default connect(null, {deleteEvaluation})(Evaluations)
+}
+
+export default connect(null, {deleteEvaluation})(Evaluations)

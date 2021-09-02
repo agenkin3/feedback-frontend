@@ -8,7 +8,7 @@ const Students = (props) => {
     <div>
       {props.students.map(student => 
       <div key={student.id}>
-  <Link to={`/students/${student.id}`}>{student.name} - ${student.year}</Link>
+  <Link to={`/students/${student.id}`}>{student.name} - - {student.category} - Year {student.year} </Link>
       </div>)}
       </div>
   )

@@ -3,17 +3,17 @@ import EvaluationInput from '../components/EvaluationInput'
 import Evaluations from '../components/Evaluations'
 
 class EvaluationsContainer extends React.Component {
-
   render() {
     return (
       <div>
-          <EvaluationInput/>
-          <Evaluations evaluations={this.props.students && this.props.student.evaluations}/>
+          <EvaluationInput student={this.props.student}/><br/>
+          <Evaluations evaluations={this.props.student && this.props.student.evaluations}/>
       </div>
 
     )
 
   }
+
 }
 export default EvaluationsContainer
 

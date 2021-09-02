@@ -4,7 +4,34 @@ export default function studentReducer(state = {students: []}, action) {
       return {students: action.payload}
       case 'ADD_STUDENT':
         return {...state, students: [...state.students, action.payload]}
-      default:
+        case 'ADD_EVALUATION':
+          let students = state.students.map(student => {
+            if (student.id === action.payload.id) {
+              return action.payload
+            } else {
+              return student
+            }
+          })
+          return {...state, students: students}
+        case 'DELETE_EVALUATION':
+          let studentsTwo = state.students.map(student => {
+            if (student.id === action.payload.id) {
+              return action.payload
+            } else {
+              return student
+            }
+          })
+          return {...state, students: studentsTwo}
+        case 'EDIT_STUDENT':
+          let studentsThree = state.students.map(student => {
+            if (student.id === action.payload.id) {
+              return action.payload
+            } else {
+              return student
+            }
+          })
+          return {...state, students: studentsThree}
+        default:
         return state
   }
 }
