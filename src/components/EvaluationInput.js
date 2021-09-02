@@ -24,7 +24,7 @@ render() {
           <input type="text" name="comment" value={this.state.comment} onChange={this.handleChange}/>
           <label>Competency:</label>
           
-          <select name="compentency" value={this.state.competency} onChange={this.handleChange}>
+          <select name="competency" value={this.state.competency} onChange={this.handleChange}>
             <option>Medical Knowledge </option>
             <option>Patient Care</option>
             <option>Communication</option>

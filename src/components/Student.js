@@ -1,15 +1,13 @@
 //shows specific student
 import React from 'react'
-import {Redirect} from 'react-router-dom'
 import StudentEdit from './StudentEdit'
 import EvaluationsContainer from '../containers/EvaluationsContainer'
 
 const Student = (props) => {
 
-  let student = props.students.filter(student => student.id == props.match.params.id)[0]
+  let student = props.students.filter(student => student.id === parseInt(props.match.params.id))[0]
   
   console.log(student)
-  
   return (
     <div>
     <h2>
