@@ -5,6 +5,6 @@ export const deleteEvaluation = (evaluationId, studentId) => {
       method: 'DELETE'
     })
     .then(response => response.json())
-    .then(student => dispatch({type: 'DELETE_EVALUATION', payload: studentId}))
+    .then(student => dispatch({type: 'DELETE_EVALUATION', payload: student}))
   }
 }

@@ -18,7 +18,7 @@ render() {
   return (
       <div>
         {this.props.evaluations && this.props.evaluations.map(evaluation =>
-          <li key={evaluation.id}>{evaluation.date} - {evaluation.kind} - {evaluation.amount}  <button onClick={() => this.vote(evaluation.id)}>Agree {this.state[evaluation.id] ? this.state[evaluation.id] : 0}</button><button onClick={() => this.handleDelete(evaluation)}>Delete</button></li>
+          <li key={evaluation.id}>{evaluation.rating} - {evaluation.competency} - {evaluation.comment} - Evaluator: {evaluation.attending} -  <button onClick={() => this.vote(evaluation.id)}>Agree {this.state[evaluation.id] ? this.state[evaluation.id] : 0}</button><button onClick={() => this.handleDelete(evaluation)}>Delete</button></li>
         )}
       </div>
     )
