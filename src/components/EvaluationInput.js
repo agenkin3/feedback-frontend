@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {addEvaluation} from '../actions/addEvaluation'
 
 class EvaluationInput extends React.Component {
 
@@ -12,6 +14,17 @@ class EvaluationInput extends React.Component {
       [event.target.name]: event.target.value
     })
   }
+
+  handleSubmit = (event) => {
+      event.preventDefault()
+      this.props.addEvaluation(this.state, this.props.student.id)
+      this.setState({
+        attending: '',
+        rating: '',
+        competency: ''
+      })
+  }
+
 
 
 render() {
@@ -48,5 +61,4 @@ render() {
 }
 }
 
-
-export default EvaluationInput
+export default connect(null, {addEvaluation})(EvaluationInput)

@@ -6,8 +6,9 @@ export default function studentReducer(state = {students: []}, action) {
         return {...state, students: [...state.students, action.payload]}
         case 'ADD_EVALUATION':
           let students = state.students.map(student => {
-            if (student.id === action.payload.id) {
-              return action.payload
+            if (student.id === action.payload.studentId) {
+              student.evaluations = [...student.evaluations, action.payload.evaluation]
+              return student
             } else {
               return student
             }

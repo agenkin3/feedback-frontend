@@ -6,14 +6,14 @@ export const addEvaluation = (evaluation, studentId) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(evaluattion)
+      body: JSON.stringify(evaluation)
     })
     .then(response => response.json())
-    .then(student => {
-        if (student.error) {
-          alert(student.error)
+    .then(evaluation => {
+        if (evaluation.error) {
+          alert(evaluation.error)
         } else {
-          dispatch({type: 'ADD_EVALUATION', payload: student})
+          dispatch({type: 'ADD_EVALUATION', payload: {evaluation, studentId}})
         }
       }
     )
