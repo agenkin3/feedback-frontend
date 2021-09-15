@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+#Feedback App
+
+ Feedback App a web application where medical students and attending physicians can create and view evaluations for their shifts. 
+
+## Installation
+Please run
+
+bundle install
+Open up the back-end repo located at: https://github.com/AnaBetancourt/parents-portal-backend
+
+In backend terminal, run:
+
+rails s -p 3001
+Then, return to front-end repo. In the terminal (on windows), run:
+
+npm start
+Usage
+Use this application to browse and interact with family-friendly events and content.
+
+## Contributing
+Pull requests and bug fixes welcome.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
