@@ -13,8 +13,9 @@ rails s -p 3001
 Then, return to front-end repo. In the terminal (on windows), run:
 
 npm start
-Usage
-Use this application to browse and interact with family-friendly events and content.
+
+## Usage
+Use this application to evaluate medical students and attending physicians on various competencies as indicated by the (ACGME) [https://www.acgme.org/globalassets/PDFs/Milestones/MilestonesGuidebookforResidentsFellows.pdf]. 
 
 ## Contributing
 Pull requests and bug fixes welcome.
