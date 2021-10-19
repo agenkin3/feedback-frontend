@@ -1,12 +1,12 @@
 #Feedback App
 
- Feedback App a web application where medical students and attending physicians can create and view evaluations for their shifts. You can find the backend at this link [(www.github.com/alicegenkin/feedback-backend)]
+ Feedback App a web application where medical students and attending physicians can create and view evaluations for their shifts. You can find the backend at this [link](www.github.com/alicegenkin/feedback-backend)
 
 ## Installation
 Please run
 
 bundle install
-Open up the back-end repo located here.[(www.github.com/alicegenkin/feedback-backend)]
+Open up the back-end repo located [here](www.github.com/alicegenkin/feedback-backend). 
 
 
 In backend terminal, run:
